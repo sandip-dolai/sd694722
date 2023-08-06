@@ -9,8 +9,8 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/sandipdolai" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sandipdolai" height="10" width="10" /></a>
-<a href="https://instagram.com/iamsandip98" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="iamsandip98" height="10" width="10" /></a>
+<a href="https://linkedin.com/in/sandipdolai" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sandipdolai" height="25" width="30" /></a>
+<a href="https://instagram.com/iamsandip98" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="iamsandip98" height="25" width="30" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
