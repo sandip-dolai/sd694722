@@ -70,5 +70,3 @@
 
 ![Coding](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 ![Developer](https://media.giphy.com/media/836HiJc7pgzy8iNXCn/giphy.gif)
-![Software Engineer](https://media.giphy.com/media/3og0IV3h4Un6Zv4r8c/giphy.gif)
-![Innovation](https://media.giphy.com/media/1wmjTVnz8e6vfflFaa/giphy.gif)
