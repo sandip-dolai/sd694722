@@ -1,138 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sandip Dolai | Software Developer</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Sandip Dolai - Software Developer with experience in Django, REST APIs, ERP systems, and VPS deployment.">
-  <meta name="keywords" content="Sandip Dolai, Django Developer, Backend Developer, ERP Developer, Python Developer">
-
-  <!-- Tailwind -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandip Dolai - Portfolio</title>
+<meta name="description" content="Portfolio of Sandip Dolai, Software Developer specializing in Django, ERP, and API-driven applications.">
+<link rel="icon" href="favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-XXXX" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.13.0/tsparticles.bundle.min.js"></script>
+<style>
+body, html { margin:0; padding:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; position:relative; transition: background-color 0.5s, color 0.5s;}
+header, section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:60px 20px; opacity:0; transform:translateY(50px); transition: all 1s ease;}
+header.visible, section.visible { opacity:1; transform:translateY(0);}
+header { text-align:center; position:relative; overflow:hidden;}
+header h1 { font-size:3rem; margin-bottom:15px; z-index:2;}
+header p { font-size:1.2rem; z-index:2;}
+#particles-js { position:absolute; width:100%; height:100%; top:0; left:0; z-index:1;}
+.navbar { position:sticky; top:0; z-index:100; backdrop-filter:blur(10px);}
+.section-title { font-size:2.5rem; margin-bottom:40px; text-align:center; position:relative;}
+.section-title::after { content:""; width:80px; height:4px; background:#0d6efd; display:block; margin:10px auto 0 auto; border-radius:2px;}
+.card { max-width:800px; background: rgba(255,255,255,0.95); padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s;}
+.card:hover { transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.25);}
+.timeline { position: relative; margin: 30px 0; padding-left: 40px;}
+.timeline::before { content:""; position:absolute; left:15px; top:0; width:4px; height:100%; background:#0d6efd; border-radius:2px;}
+.timeline-item { position:relative; margin-bottom:40px; opacity:0; transform:translateY(30px); transition: all 0.8s ease;}
+.timeline-item.visible { opacity:1; transform:translateY(0);}
+.timeline-item::before { content:""; position:absolute; left:-29px; top:0; width:18px; height:18px; background:#0d6efd; border-radius:50%;}
+.skill-bar { width:100%; background-color:#e0e0e0; border-radius:10px; margin:8px 0;}
+.skill-bar-inner { height:20px; width:0; border-radius:10px; text-align:right; padding-right:8px; line-height:20px; color:white; font-weight:bold; transition: width 1.5s ease-in-out;}
+.project-card { position:relative; overflow:hidden; border-radius:12px;}
+.project-card img { width:100%; border-radius:12px; transition:transform 0.5s;}
+.project-card:hover img { transform:scale(1.05);}
+.project-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(52,58,64,0.85); color:white; display:flex; flex-direction:column; justify-content:center; align-items:center; opacity:0; transition:opacity 0.3s; border-radius:12px; text-align:center; padding:20px;}
+.project-card:hover .project-overlay { opacity:1;}
+.stats { display:flex; justify-content:center; flex-wrap:wrap; margin:20px 0;}
+.stat { margin:20px; text-align:center;}
+.stat h3 { font-size:2rem; margin-bottom:5px;}
+footer { background:#343a40; color:white; text-align:center; padding:30px 0;}
+#darkModeToggle { position:fixed; bottom:20px; right:20px; z-index:200; border:none; background:#343a40; color:white; padding:10px 15px; border-radius:50px; cursor:pointer;}
+body.dark-mode .card { background:#1e1e1e; color:#f8f9fa;}
+body.dark-mode footer { background:#1a1a1a;}
+body.dark-mode .section-title::after { background:#0d6efd;}
+</style>
 </head>
+<body data-bs-spy="scroll" data-bs-target="#navbarLinks" data-bs-offset="100" tabindex="0">
 
-<body class="bg-gray-50 text-gray-900">
-
-<!-- NAVBAR -->
-<nav id="navbar" class="fixed w-full bg-indigo-900 bg-opacity-80 backdrop-blur z-50">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-white">Sandip Dolai</h1>
-    <ul class="flex space-x-6 text-white text-sm">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Tech Stack</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Sandip Dolai</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarLinks">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-700 via-teal-600 to-purple-800 text-white">
-  <div class="text-center px-4">
-    <h2 class="text-5xl font-extrabold mb-4">Sandip Dolai</h2>
-    <p class="text-xl mb-2">Software Developer | Django & ERP Systems</p>
-    <p class="max-w-xl mx-auto text-sm opacity-90">
-      Software Developer with 2+ years of experience building ERP systems and scalable web applications using Django, Django REST Framework, PHP, and MySQL.
-    </p>
+<!-- Header -->
+<header>
+  <div id="particles-js"></div>
+  <h1>Sandip Dolai</h1>
+  <p>Software Developer | Django & ERP Systems | Backend Specialist</p>
+  <p>
+    <a href="https://www.linkedin.com/in/sandipdolai" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin fa-lg"></i></a>
+    <a href="https://github.com/sandip-dolai" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github fa-lg"></i></a>
+    <a href="https://www.sandipdolai.in" target="_blank" aria-label="Portfolio Website"><i class="fas fa-globe fa-lg"></i></a>
+  </p>
+  <a href="https://drive.google.com/file/d/1Jz0ruYNwAV8-wl34d_ROX6EhTNwFbu_Z/view?usp=sharing" class="btn btn-primary mt-3" download>Download Resume</a>
+</header>
 
-    <div class="mt-6 space-x-4">
-      <a href="https://www.linkedin.com/in/sandipdolai" target="_blank" class="btn-primary">LinkedIn</a>
-      <a href="https://github.com/sandip-dolai" target="_blank" class="btn-outline">GitHub</a>
+<!-- About -->
+<section id="about" class="container">
+  <h2 class="section-title">Professional Summary</h2>
+  <div class="card visible">
+    <p>Software Developer with ~2 years of production experience building scalable ERP and SaaS platforms. Strong expertise in Django, Django REST Framework, REST API design, role-based access control, and database optimization using MySQL and PostgreSQL. Experienced in direct client collaboration, requirement analysis, and guiding users on system usage. Proven ability to deploy and maintain applications on Ubuntu VPS with Nginx supporting real business workflows and 100+ daily users.</p>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="container">
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h5>SKC Infotech | Software Developer | Kolkata, WB</h5>
+      <p><strong>Feb 2024 – Present</strong></p>
+      <ul>
+        <li>Developed Django-based ERP modules (Inventory, HR, Sales, CRM).</li>
+        <li>Optimized REST APIs, improving performance by ~25%.</li>
+        <li>Implemented RBAC and permission workflows for multi-department approvals.</li>
+        <li>Delivered 14+ production ERP systems handling 500+ monthly transactions.</li>
+      </ul>
     </div>
   </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2 class="section-title">About Me</h2>
-  <p class="section-text">
-    I am a Software Developer at <strong>SKC Infotech</strong>, working on production-level ERP systems and SaaS-style applications.
-    I started as a Junior Software Developer in February 2024 and was promoted to Software Developer in February 2025.
-    <br><br>
-    I have delivered <strong>14+ ERP systems</strong> handling inventory, HR, CRM, sales, and reporting workflows.
-    My expertise includes backend development with Django & Django REST Framework, database optimization using MySQL & PostgreSQL,
-    and deployment on Ubuntu VPS with Nginx.
-  </p>
-</section>
-
-<!-- TECH STACK -->
-<section id="skills" class="section bg-gray-100">
-  <h2 class="section-title">Tech Stack</h2>
-
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-    <span class="chip">Python</span>
-    <span class="chip">Django</span>
-    <span class="chip">Django REST Framework</span>
-    <span class="chip">REST APIs</span>
-    <span class="chip">MySQL</span>
-    <span class="chip">PostgreSQL</span>
-    <span class="chip">PHP</span>
-    <span class="chip">HTML5</span>
-    <span class="chip">CSS3</span>
-    <span class="chip">JavaScript</span>
-    <span class="chip">AJAX</span>
-    <span class="chip">jQuery</span>
-    <span class="chip">Linux (Ubuntu)</span>
-    <span class="chip">Nginx</span>
-    <span class="chip">Git & GitHub</span>
-    <span class="chip">VPS Deployment</span>
+  <div class="stats">
+    <div class="stat"><h3 class="counter" data-target="14">0</h3><p>ERP Projects</p></div>
+    <div class="stat"><h3 class="counter" data-target="100">0</h3><p>Daily Users</p></div>
+    <div class="stat"><h3 class="counter" data-target="2">0</h3><p>Years Experience</p></div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
+<!-- Projects -->
+<section id="projects" class="container">
   <h2 class="section-title">Projects</h2>
-
-  <div class="max-w-4xl mx-auto space-y-6">
-    <div class="project-card">
-      <h3>ERP Systems (14+)</h3>
-      <p>
-        Designed and developed ERP systems using PHP, MySQL, and Django to manage
-        inventory, HR, CRM, sales workflows, reporting, and approval processes.
-        Deployed on VPS with production users.
-      </p>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="project-card">
+        <img src="project1.png" alt="Screenshot of Research Collaboration Platform">
+        <div class="project-overlay">
+          <h5>Research Collaboration Platform</h5>
+          <p>Multi-role SaaS platform with Django, DRF, community posts, subscriptions, expert bookings, and messaging.</p>
+          <a href="https://github.com/sandip-dolai/research_paltform" class="btn btn-light btn-sm" target="_blank">View on GitHub</a>
+        </div>
+      </div>
     </div>
-
-    <div class="project-card">
-      <h3>Django SaaS Platform</h3>
-      <p>
-        Built a role-based SaaS platform using Django and Django REST Framework
-        with authentication, permissions, subscriptions, messaging, and REST APIs.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h3>Dynamic Reporting System</h3>
-      <p>
-        Implemented real-time reports with filters and pagination using AJAX,
-        optimized SQL queries, and backend APIs.
-      </p>
+    <div class="col-md-6">
+      <div class="project-card">
+        <img src="project2.png" alt="Screenshot of ERP Module Project">
+        <div class="project-overlay">
+          <h5>ERP Module Project</h5>
+          <p>Developed Inventory, HR, and Sales modules with REST APIs and role-based access.</p>
+          <a href="https://github.com/sandip-dolai" class="btn btn-light btn-sm" target="_blank">View on GitHub</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section bg-gray-100">
-  <h2 class="section-title">Contact</h2>
-  <p class="section-text">
-    📧 sandip1998dolai@gmail.com<br>
-    📍 Kolkata, India
-  </p>
-
-  <div class="flex justify-center space-x-6 mt-4">
-    <a href="https://www.linkedin.com/in/sandipdolai" target="_blank" class="link">LinkedIn</a>
-    <a href="https://github.com/sandip-dolai" target="_blank" class="link">GitHub</a>
-    <a href="https://www.sandipdolai.in" target="_blank" class="link">Website</a>
+<!-- Education -->
+<section id="education" class="container">
+  <h2 class="section-title">Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h5>Master of Computer Applications (MCA)</h5>
+      <p>Brainware University | Sep 2021 – Aug 2023 | Score: 90%</p>
+    </div>
   </div>
 </section>
 
-<footer class="bg-indigo-900 text-white text-center py-4 text-sm">
-  © 2025 Sandip Dolai
+<!-- Skills -->
+<section id="skills" class="container">
+  <h2 class="section-title">Skills</h2>
+  <div style="max-width:800px; width:100%;">
+    <p>Python</p><div class="skill-bar"><div class="skill-bar-inner bg-primary" data-width="90%">90%</div></div>
+    <p>Django</p><div class="skill-bar"><div class="skill-bar-inner bg-success" data-width="85%">85%</div></div>
+    <p>Django REST Framework</p><div class="skill-bar"><div class="skill-bar-inner bg-success" data-width="80%">80%</div></div>
+    <p>MySQL</p><div class="skill-bar"><div class="skill-bar-inner bg-warning text-dark" data-width="80%">80%</div></div>
+    <p>JavaScript</p><div class="skill-bar"><div class="skill-bar-inner bg-info text-dark" data-width="75%">75%</div></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Sandip Dolai | <a href="mailto:sandip1998dolai@gmail.com" class="text-white">Contact Me</a></p>
 </footer>
 
-<script src="script.js"></script>
+<button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-XXXX" crossorigin="anonymous"></script>
+<script>
+// tsParticles
+tsParticles.load("particles-js",{particles:{number:{value:50},size:{value:3},move:{speed:2}},interactivity:{events:{onhover:{enable:true,mode:"repulse"}}}});
+
+// IntersectionObserver for animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+      if(entry.target.querySelector('.skill-bar-inner')) animateSkills();
+      if(entry.target.querySelector('.counter')) animateCounters();
+    }
+  });
+}, { threshold:0.2 });
+document.querySelectorAll('section, .timeline-item').forEach(el=>observer.observe(el));
+
+// Skills
+function animateSkills(){
+  document.querySelectorAll('.skill-bar-inner').forEach(bar=>{
+    if(!bar.classList.contains('animated')){
+      bar.style.width = bar.getAttribute('data-width');
+      bar.classList.add('animated');
+    }
+  });
+}
+
+// Counters
+function animateCounters(){
+  document.querySelectorAll('.counter').forEach(counter=>{
+    if(!counter.classList.contains('animated')){
+      let target=+counter.getAttribute('data-target');
+      let count=0;
+      let step=Math.ceil(target/100);
+      const interval=setInterval(()=>{
+        count+=step;
+        if(count>=target){ counter.innerText=target; clearInterval(interval); }
+        else counter.innerText=count;
+      },15);
+      counter.classList.add('animated');
+    }
+  });
+}
+
+// Dark mode
+const toggleBtn=document.getElementById('darkModeToggle');
+if(localStorage.getItem('theme')==='dark'){ document.documentElement.setAttribute('data-bs-theme','dark'); document.body.classList.add('dark-mode'); }
+toggleBtn.addEventListener('click',()=>{
+  const html=document.documentElement;
+  if(html.getAttribute('data-bs-theme')==='light'){
+    html.setAttribute('data-bs-theme','dark'); document.body.classList.add('dark-mode'); localStorage.setItem('theme','dark');
+  } else{
+    html.setAttribute('data-bs-theme','light'); document.body.classList.remove('dark-mode'); localStorage.setItem('theme','light');
+  }
+});
+</script>
 </body>
 </html>
