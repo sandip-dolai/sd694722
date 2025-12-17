@@ -1,202 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
   <title>Sandip Dolai | Software Developer</title>
-  <meta name="description" content="Portfolio of Sandip Dolai, Software Developer specializing in Django, DRF, ERP systems, and scalable backend applications.">
-
-  <!-- Favicon (optional, safe if missing) -->
-  <link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/code-slash.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-  <!-- tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.13.0/tsparticles.bundle.min.js"></script>
-
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    header, section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease;
-    }
-
-    header.visible, section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    header {
-      position: relative;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    #particles-js {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-    }
-
-    header * {
-      position: relative;
-      z-index: 2;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-    }
-
-    .section-title {
-      font-size: 2.4rem;
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    .section-title::after {
-      content: "";
-      width: 80px;
-      height: 4px;
-      background: #0d6efd;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-
-    .card-custom {
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    body.dark-mode .card-custom {
-      background: #1e1e1e;
-      color: #f8f9fa;
-    }
-
-    .timeline {
-      max-width: 900px;
-      width: 100%;
-      position: relative;
-      padding-left: 40px;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: #0d6efd;
-    }
-
-    .timeline-item {
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -32px;
-      top: 4px;
-      width: 18px;
-      height: 18px;
-      background: #0d6efd;
-      border-radius: 50%;
-    }
-
-    .project-card {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    .project-placeholder {
-      height: 220px;
-      background: #212529;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 14px;
-    }
-
-    .project-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      padding: 20px;
-    }
-
-    .project-card:hover .project-overlay {
-      opacity: 1;
-    }
-
-    footer {
-      background: #212529;
-      color: white;
-      padding: 30px 0;
-      text-align: center;
-    }
-
-    #darkModeToggle {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      border: none;
-      background: #212529;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 30px;
-      cursor: pointer;
-      z-index: 2000;
-    }
-  </style>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+  >
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarLinks" data-bs-offset="100">
+<body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">Sandip Dolai</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navLinks">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarLinks">
+
+    <div class="collapse navbar-collapse justify-content-end" id="navLinks">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
@@ -207,121 +40,102 @@
   </div>
 </nav>
 
-<!-- HEADER -->
-<header>
-  <div id="particles-js"></div>
-  <h1 class="display-4 fw-bold">Sandip Dolai</h1>
-  <p class="lead">Software Developer | Django & ERP Systems</p>
+<!-- HERO -->
+<section class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="fw-bold">Sandip Dolai</h1>
+    <p class="lead">Software Developer | Django & ERP Systems</p>
 
-  <p>
-    <a href="https://www.linkedin.com/in/sandipdolai" target="_blank" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-    <a href="https://github.com/sandip-dolai" target="_blank"><i class="fab fa-github fa-lg"></i></a>
-  </p>
+    <p>
+      <a href="https://www.linkedin.com/in/sandipdolai" target="_blank" class="me-3">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/sandip-dolai" target="_blank">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+    </p>
 
-  <a
-    href="https://drive.google.com/uc?export=download&id=1Jz0ruYNwAV8-wl34d_ROX6EhTNwFbu_Z"
-    target="_blank"
-    class="btn btn-primary mt-3"
-  >
-    Download Resume
-  </a>
-</header>
+    <a
+      href="https://drive.google.com/uc?export=download&id=1Jz0ruYNwAV8-wl34d_ROX6EhTNwFbu_Z"
+      target="_blank"
+      class="btn btn-primary"
+    >
+      Download Resume
+    </a>
+  </div>
+</section>
 
 <!-- ABOUT -->
-<section id="about">
-  <h2 class="section-title">Professional Summary</h2>
-  <div class="card-custom">
-    Software Developer with ~2 years of production experience building scalable ERP and SaaS platforms using Django and Django REST Framework. Strong in REST API design, RBAC, and database optimization with MySQL & PostgreSQL. Experienced in deploying and maintaining applications on Ubuntu VPS with Nginx.
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="mb-4">Professional Summary</h2>
+    <p>
+      Software Developer with ~2 years of production experience building ERP and
+      SaaS platforms using Django and Django REST Framework. Strong in REST API
+      design, RBAC, and database optimization with MySQL & PostgreSQL.
+    </p>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <h2 class="section-title">Experience</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <h5>SKC Infotech — Software Developer</h5>
-      <p><strong>Feb 2024 – Present</strong></p>
-      <ul>
-        <li>Built ERP modules (Inventory, HR, Sales, CRM)</li>
-        <li>Optimized DRF APIs improving performance ~25%</li>
-        <li>Implemented role-based access control</li>
-        <li>Deployed apps on Ubuntu VPS with Nginx</li>
-      </ul>
-    </div>
+<section id="experience" class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-4">Experience</h2>
+
+    <h5>SKC Infotech — Software Developer</h5>
+    <p><strong>Feb 2024 – Present</strong></p>
+    <ul>
+      <li>Built ERP modules (Inventory, HR, Sales, CRM)</li>
+      <li>Optimized DRF APIs improving performance ~25%</li>
+      <li>Implemented role-based access control</li>
+      <li>Deployed applications on Ubuntu VPS using Nginx</li>
+    </ul>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <h2 class="section-title">Projects</h2>
-
+<section id="projects" class="py-5">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="project-card">
-          <div class="project-placeholder">
-            <i class="fas fa-diagram-project fa-3x"></i>
-          </div>
-          <div class="project-overlay">
-            <h5>Research Collaboration Platform</h5>
-            <p>Django & DRF based multi-role SaaS platform with bookings, subscriptions, messaging, and RBAC.</p>
-            <a href="https://github.com/sandip-dolai/research_paltform" target="_blank" class="btn btn-light btn-sm">
-              View on GitHub
-            </a>
-          </div>
-        </div>
+    <h2 class="mb-4">Projects</h2>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Research Collaboration Platform</h5>
+        <p class="card-text">
+          Multi-role SaaS platform built with Django & DRF featuring expert bookings,
+          subscriptions, messaging, and role-based access control.
+        </p>
+        <a
+          href="https://github.com/sandip-dolai/research_paltform"
+          target="_blank"
+          class="btn btn-outline-dark btn-sm"
+        >
+          View on GitHub
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="card-custom text-center">
-    Python · Django · DRF · MySQL · PostgreSQL · REST APIs · Linux · Nginx · Git
+<section id="skills" class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-4">Skills</h2>
+    <p>
+      Python · Django · Django REST Framework · MySQL · PostgreSQL ·
+      REST APIs · Linux · Nginx · Git
+    </p>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <p>© 2025 Sandip Dolai · <a href="mailto:sandip1998dolai@gmail.com" class="text-white">Contact</a></p>
+<footer class="bg-dark text-white text-center py-3">
+  © 2025 Sandip Dolai ·
+  <a href="mailto:sandip1998dolai@gmail.com" class="text-white">Contact</a>
 </footer>
-
-<button id="darkModeToggle"><i class="fas fa-moon"></i></button>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-
-    tsParticles.load("particles-js", {
-      particles: {
-        number: { value: 50 },
-        size: { value: 3 },
-        move: { speed: 2 }
-      }
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll("header, section").forEach(el => observer.observe(el));
-
-    const toggle = document.getElementById("darkModeToggle");
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-
-  });
-</script>
 
 </body>
 </html>
